@@ -1,0 +1,67 @@
+/* fixed room (home only) */
+.scene{position:fixed;inset:0;z-index:0;background:#070606;overflow:hidden}
+#room{position:absolute;inset:0;width:100%;height:100%;display:block}
+main,footer{position:relative;z-index:2}
+#steam path{animation:rise 3.6s ease-in-out infinite;stroke-dasharray:60 200}
+#steam path:nth-child(2){animation-delay:1.2s}#steam path:nth-child(3){animation-delay:2.4s}
+@keyframes rise{0%{stroke-dashoffset:60;opacity:0}30%{opacity:.55}100%{stroke-dashoffset:-140;opacity:0}}
+#code{animation:scroll 16s linear infinite}
+@keyframes scroll{to{transform:translateY(-400px)}}
+.caret{animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* home */
+.home-name{position:absolute;left:40px;right:16px;top:calc(env(safe-area-inset-top,0px) + 100px);display:flex;justify-content:flex-start;font-family:var(--pop);margin:0;font-weight:800;font-size:clamp(58px,7.8vw,112px);line-height:1.05;letter-spacing:-.02em;transform-origin:left top;color:#fff;text-shadow:0 0 40px rgba(255,255,255,.18),0 6px 30px rgba(0,0,0,.7);pointer-events:none;padding:0;will-change:opacity,transform}
+@media (max-width:1100px){.home-name{left:24px}}
+@media (max-width:900px){.home-name{left:16px;top:calc(env(safe-area-inset-top,0px) + 108px);font-size:min(39px,9.4vw)}}
+.role-t{display:flex;align-items:flex-end;white-space:nowrap}
+.role-t .roll{position:relative;display:inline-block;overflow:hidden;height:1.4em;width:9em;transition:width .4s cubic-bezier(.3,.7,.2,1);flex:none}
+.role-t .se{margin-left:.55em;line-height:1.4em}
+.role-t .rw{position:absolute;left:0;bottom:0;line-height:1.4em;white-space:nowrap;transition:transform .5s cubic-bezier(.3,.7,.2,1),opacity .5s,color .3s}
+.role-t .rw.enter{transform:translateY(-110%);opacity:0}
+.role-t .rw.leave{transform:translateY(110%);opacity:0}
+.role-t .rw::after{content:"";position:absolute;left:-2px;right:auto;top:48%;height:2px;width:0;background:#E3262B;box-shadow:0 0 8px rgba(227,38,43,.8);transition:width .35s ease}
+.role-t .rw.strike::after{width:calc(100% + 4px)}
+.role-t .rw.strike{color:#9a9a9a}
+.role-t .rw.blink{animation:rblink .4s steps(1) 2}
+@keyframes rblink{50%{opacity:0}}
+.role-t .rw.final{color:#fff;text-shadow:0 0 18px rgba(255,255,255,.55);animation:rblink .3s steps(1) 3}
+.home-name .nm{display:inline-flex;flex-direction:column;align-items:flex-start}
+.home-name .role-t{font-family:var(--pop);font-weight:400;font-size:clamp(12px,1.1vw,16px);letter-spacing:.3em;text-transform:uppercase;color:#e9e9e9;text-shadow:0 2px 16px rgba(0,0,0,.8);margin:.55em 0 0 .1em;line-height:1.3}
+#home{height:230svh;position:relative}
+.home-stick{position:sticky;top:0;height:100svh;display:flex;align-items:flex-end}
+.home-stick .col{max-width:1010px;padding-block:0 72px}
+.home-copy{opacity:0;transform:translateY(40px);will-change:opacity,transform}
+.hello{font-family:var(--pop);font-weight:700;font-size:clamp(48px,7vw,96px);line-height:1.05;letter-spacing:-.02em;color:#fff;text-shadow:0 4px 30px rgba(0,0,0,.5)}
+.home-copy p{margin:22px 0 0;font-family:var(--pop);font-weight:300;font-size:clamp(17px,1.5vw,21px);line-height:1.55;color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.85);max-width:62ch}
+.side-scroll{position:fixed;right:24px;top:50%;transform:translateY(-50%);z-index:20;display:flex;flex-direction:column;align-items:center;gap:14px;padding:18px 12px 16px;border-radius:999px;background:rgba(20,20,24,.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.22);box-shadow:0 0 0 0 rgba(255,255,255,.35),0 10px 30px rgba(0,0,0,.35);pointer-events:none;opacity:0;transition:opacity .4s;animation:railGlow 2.4s ease-out infinite}
+@keyframes railGlow{0%{box-shadow:0 0 0 0 rgba(255,255,255,.35),0 10px 30px rgba(0,0,0,.35)}70%,100%{box-shadow:0 0 0 12px rgba(255,255,255,0),0 10px 30px rgba(0,0,0,.35)}}
+.side-scroll.show{opacity:1}
+.side-scroll .lbl{writing-mode:vertical-rl;font-family:var(--pop);font-size:12.5px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#fff}
+.side-scroll .trk{position:relative;width:2px;height:110px;background:rgba(255,255,255,.25);overflow:hidden;border-radius:2px}
+.side-scroll .run{position:absolute;left:0;top:0;width:100%;height:45%;background:linear-gradient(to bottom,transparent,#fff);box-shadow:0 0 8px #fff;animation:runDown 1.6s cubic-bezier(.6,0,.4,1) infinite}
+@keyframes runDown{0%{transform:translateY(-100%)}100%{transform:translateY(240%)}}
+.side-scroll .fill{position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(255,255,255,.7);transform-origin:top;transform:scaleY(0)}
+.side-scroll .chev{width:14px;height:14px;animation:chev 1.6s ease-in-out infinite}
+.side-scroll .chev path{fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+@keyframes chev{0%,100%{transform:translateY(-2px);opacity:.5}50%{transform:translateY(4px);opacity:1}}
+.side-scroll.end{animation:none}
+.side-scroll.end .run,.side-scroll.end .chev{display:none}
+.side-scroll.end .lbl{color:rgba(255,255,255,.45)}
+@media (min-width:901px){.col{padding-right:96px}}
+body[data-page="experience"] .side-scroll .lbl{color:#fff}
+body[data-page="experience"] .side-scroll .trk{background:rgba(255,255,255,.35)}
+@media (max-width:700px){.side-scroll{right:8px;padding:12px 8px}.side-scroll .trk{height:70px}.side-scroll .lbl{font-size:10.5px}#cars-scene .tiles{padding:80px 52px 10px 10px!important}}
+@media (prefers-reduced-motion:reduce){.side-scroll .run{animation:none;height:100%;opacity:.4}.side-scroll,.side-scroll .chev{animation:none}}
+.scroll-hint .m{width:26px;height:40px;border:1.5px solid #fff;border-radius:13px;display:flex;justify-content:center;padding-top:6px}
+.scroll-hint .m i{width:3px;height:7px;border-radius:2px;background:#fff;animation:wheel 1.6s ease-in-out infinite}
+#bubble{position:fixed;z-index:25;left:0;top:0;pointer-events:none;background:#fff;color:#141414;font-family:var(--pop);font-size:15px;font-weight:500;line-height:1.35;padding:12px 16px;border-radius:16px 16px 16px 4px;box-shadow:0 10px 30px rgba(0,0,0,.4);max-width:230px;opacity:0;transform:translate(-4px,6px) scale(.9);transform-origin:0 100%;transition:opacity .3s,transform .3s}
+#bubble small{display:block;font-weight:300;font-size:13px;color:#555;margin-top:2px}
+#bubble.on{opacity:1;transform:none}
+#wave{transform-box:fill-box;transform-origin:50% 100%}
+#wave.on{animation:wave 1s ease-in-out infinite}
+@keyframes wave{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(14deg)}}
+#face,#wave{transition:opacity .35s}
+
+
+@media (prefers-reduced-motion:reduce){#steam path,#code,.caret,.mouse i{animation:none}}
