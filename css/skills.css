@@ -1,0 +1,28 @@
+/* skills */
+#skills{background:linear-gradient(180deg,var(--navy-1) 0%,var(--navy-2) 55%,var(--navy-3) 100%);padding-block:130px 90px}
+.toggle{display:flex;align-items:center;justify-content:center;gap:22px;font-family:var(--body);font-weight:300;font-size:19px;margin-bottom:44px}
+.toggle label{cursor:pointer}
+.switch{all:unset;width:40px;height:22px;border-radius:999px;background:rgba(160,168,185,.55);position:relative;flex:none}
+.switch i{position:absolute;left:4px;top:4px;width:14px;height:14px;border-radius:50%;background:#fff;transition:transform .25s}
+.switch[aria-checked="true"] i{transform:translateX(18px)}
+.icons{display:flex;flex-wrap:wrap;justify-content:center;gap:26px 34px;max-width:920px;margin:0 auto}
+.ic{all:unset;width:112px;height:112px;display:grid;place-items:center;border-radius:12px;transition:transform .25s}
+.ic svg{width:100%;height:100%;overflow:visible}
+.ic .sh{fill:var(--navy-1);stroke:#fff;stroke-width:2.2}
+.ic .sh2{fill:none;stroke:#fff;stroke-width:1.2;opacity:.55}
+.ic text{fill:var(--navy-1);stroke:#fff;stroke-width:1.4;font-family:var(--pop);font-weight:700;paint-order:stroke}
+.ic:hover,.ic.sel{transform:translateY(-4px)}
+.ic.sel .sh{stroke:var(--yellow)}
+.ic.sel text{stroke:var(--yellow)}
+@media (max-width:560px){.ic{width:84px;height:84px}.icons{gap:14px 16px}}
+.tdesc{text-align:center;max-width:520px;margin:44px auto 0;min-height:150px}
+.tdesc h3{font-family:var(--pop);font-weight:400;font-size:29px;color:var(--yellow)}
+.tdesc p{margin:6px 0 0;font-family:var(--body);font-weight:300;font-size:20px;line-height:1.5;color:#f0f0f0}
+.soft{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:980px){.soft{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.soft{grid-template-columns:1fr}}
+.sc{position:relative;overflow:hidden;background:var(--navy-card);border:1px solid var(--navy-line);border-radius:10px;padding:34px 30px 38px;min-width:0}
+.sc::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(260px circle at var(--mx,-400px) var(--my,-400px),rgba(30,155,224,.28),transparent 70%)}
+.sc svg{width:40px;height:40px;stroke:var(--icon);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;position:relative}
+.sc h3{font-family:var(--body);font-weight:700;font-size:18px;margin:18px 0 14px;color:#fff;position:relative;letter-spacing:-.01em}
+.sc p{margin:0;font-size:14.5px;line-height:1.85;color:#e2e6ee;font-weight:400;position:relative}
