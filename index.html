@@ -10,11 +10,12 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Ms+Madi&family=Poppins:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&family=Rock+Salt&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Ms+Madi&family=Poppins:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&family=Rock+Salt&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500;700&display=swap">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/home.css">
-<link rel="stylesheet" href="css/skills.css">
+<link rel="stylesheet" href="css/demos.css">
 <link rel="stylesheet" href="css/experience.css">
+<link rel="stylesheet" href="css/skills.css">
 </head>
 <body>
 
@@ -151,35 +152,83 @@
 <div class="side-scroll" id="scroll-hint" aria-hidden="true"><span class="lbl">Scroll</span><span class="trk"><i class="run"></i><i class="fill" id="scroll-fill"></i></span><svg class="chev" viewBox="0 0 14 14"><path d="M2 4l5 5 5-5"/></svg></div>
 
 <nav class="top" id="nav">
-  <div class="pill" id="pill"><a href="#home" class="on">Home</a><a href="#skills">Skills</a><a href="#experience">Experience</a></div>
+  <div class="pill" id="pill"><a href="#home" class="on">Home</a><a href="#work">Work</a></div>
 </nav>
 
 <main id="top">
 
 <section class="page" id="home" data-page="home">
-  <div class="home-stick">
+  <div class="home-hero"><div class="home-stick">
     <h2 class="home-name" id="home-name"><span class="nm"><span>Rohit Annavarapu</span><span class="role-t"><span class="roll" id="roll"><span class="rw cur">Full Stack</span></span><span class="se">Software Engineer</span></span></span></h2>
     <div class="col"><div class="home-copy" id="home-copy">
       <h1 class="hello">Hello there!</h1>
-      <p>I'm Rohit Annavarapu, a full stack software engineer. I've built software for companies in healthcare, banking, higher education and energy. Explore my skills, experience and story in About, and if we align, let's build something together. You'll find my details under Contact.</p>
+      <p>I'm Rohit Annavarapu, a full stack software engineer. I've built software for companies in healthcare, banking, higher education and energy. Ask me anything like an API, test my problem solving below, see my work, and find out what drives me beyond code. If we align, you'll find my details under Contact.</p>
     </div></div>
-  </div>
+  </div></div>
+  <div class="build" id="build" role="region" aria-label="Ask me like an API and Break my system"><div class="col">
+
+    <div class="xhead"><span class="eyebrow">01 · Who I am</span><h2 id="api-h">Ask me like an API.</h2></div>
+    <div class="apix">
+      <div class="apix-eps" role="tablist" aria-label="Endpoints">
+        <button class="ep on" type="button" data-ep="me"><b class="get">GET</b>/rohit</button>
+        <button class="ep" type="button" data-ep="strengths"><b class="get">GET</b>/rohit/strengths</button>
+        <button class="ep" type="button" data-ep="ai"><b class="get">GET</b>/rohit/ai</button>
+        <button class="ep" type="button" data-ep="stack"><b class="get">GET</b>/rohit/stack</button>
+        <button class="ep hot" type="button" data-ep="practice"><b class="get">GET</b>/rohit/in-practice</button>
+        <button class="ep" type="button" data-ep="hire"><b class="post">POST</b>/rohit/hire</button>
+      </div>
+      <div class="apix-res">
+        <div class="apix-bar"><span id="apix-req">GET /rohit</span><span id="apix-status" class="ok">200 OK</span></div>
+        <pre class="apix-body" id="apix-body" aria-live="polite"></pre>
+        <div class="apix-cta" id="apix-cta" hidden><button type="button" id="go-sys">Break my system ↓</button></div>
+      </div>
+    </div>
+
+    <div class="xhead sys-head" id="sys"><span class="eyebrow">02 · How I work</span><h2>Break my system.</h2>
+      <p>A small live system I designed. Throw real failures at it and watch it scale, fail over and heal, with an AI agent on call explaining every move.</p></div>
+
+    <div class="sx" id="sx">
+      <div class="sx-top">
+        <span class="sx-dots"><i></i><i></i><i></i></span>
+        <span class="sx-name">sandbox <em>· simulated, runs in your browser</em></span>
+        <span class="sx-status ok" id="sx-status">Healthy</span>
+        <div class="sx-metrics">
+          <span><small>Throughput</small><b id="m-rps">1.2k</b><em>req/s</em></span>
+          <span><small>p95 latency</small><b id="m-p95">120</b><em>ms</em></span>
+          <span><small>Errors</small><b id="m-err">0.00</b><em>%</em></span>
+          <span><small>Writes lost</small><b id="m-lost">0</b></span>
+          <svg class="sx-spark" id="m-spark" viewBox="0 0 120 30" preserveAspectRatio="none" aria-hidden="true"><polyline id="m-line" fill="none" stroke="#6FD3BE" stroke-width="2" points=""/></svg>
+        </div>
+      </div>
+      <div class="sx-body">
+        <div class="sx-map">
+          <svg id="sx-svg" viewBox="0 0 760 400" role="img" aria-label="Live system map: users, load balancer, app servers, cache, queue and a three-node database cluster"></svg>
+          <div class="sx-legend"><span><i style="background:#9DB1FF"></i>read</span><span><i style="background:#F1C071"></i>write</span><span><i style="background:#ff7b72"></i>error</span><span><i style="background:#6FD3BE"></i>replication</span></div>
+        </div>
+        <div class="sx-agent">
+          <div class="sx-agent-h"><span class="pulse"></span>On-call AI agent<em>plans · calls tools · asks before risky moves</em></div>
+          <ol class="trace" id="sx-trace" aria-live="polite"><li class="idle">All quiet. Pick a failure below and I'll handle it.</li></ol>
+        </div>
+      </div>
+      <div class="sx-ctl">
+        <div class="sx-btns">
+          <button class="sxb" type="button" data-x="spike"><b>10× traffic spike</b><span>Scale out without falling over</span></button>
+          <button class="sxb" type="button" data-x="kill"><b>Kill the database leader</b><span>Fail over with zero data loss</span></button>
+          <button class="sxb" type="button" data-x="split"><b>Split the network</b><span>Keep one source of truth</span></button>
+          <button class="sxb" type="button" data-x="deploy"><b>Ship a bad release</b><span>Catch it before users do</span></button>
+          <button class="sxb reset" type="button" data-x="reset"><b>Reset</b><span>Back to calm</span></button>
+        </div>
+        <div class="sx-skills" id="sx-skills"><span data-k="design">System design</span><span data-k="dist">Distributed systems</span><span data-k="scale">Scalability</span><span data-k="ai">AI agents</span></div>
+      </div>
+    </div>
+
+    <div class="build-cta"><p>That's how I think. See where I've applied it.</p><a href="#work">See my work</a></div>
+  </div></div>
+
 </section>
 
-<section class="page" id="skills" data-page="skills" hidden><div class="col">
-  <div class="toggle">
-    <label for="sw" id="lbl-tech">Technology</label>
-    <button class="switch" id="sw" role="switch" aria-checked="false" aria-labelledby="lbl-tech lbl-soft"><i></i></button>
-    <label for="sw" id="lbl-soft">Collaboration Skills</label>
-  </div>
-  <div id="tech">
-    <div class="icons" id="icons"></div>
-    <div class="tdesc" aria-live="polite"><h3 id="t-name"></h3><p id="t-text"></p></div>
-  </div>
-  <div id="soft" class="soft" hidden></div>
-</div></section>
-
-<section class="page" id="experience" data-page="experience" hidden><div class="col">
+<section class="page" id="work" data-page="work" hidden>
+<div class="zone" id="experience" data-zone="experience"><div class="col">
   <h2 class="exp-title">Experience</h2>
   <div class="wall">
 
@@ -262,13 +311,28 @@
     <div class="edu-txt"><span class="dom">Graduate degree</span><h3>Master of Science, Computer Science</h3><div class="meta">University of Kansas · Lawrence, Kansas</div></div>
   </article>
 
-</div></section>
+</div></div>
+<div class="zone" id="skills" data-zone="skills"><div class="col">
+  <h2 class="exp-title skills-title">Skills</h2>
+  <div class="toggle">
+    <label for="sw" id="lbl-tech">Technology</label>
+    <button class="switch" id="sw" role="switch" aria-checked="false" aria-labelledby="lbl-tech lbl-soft"><i></i></button>
+    <label for="sw" id="lbl-soft">Collaboration Skills</label>
+  </div>
+  <div id="tech">
+    <div class="icons" id="icons"></div>
+    <div class="tdesc" aria-live="polite"><h3 id="t-name"></h3><p id="t-text"></p></div>
+  </div>
+  <div id="soft" class="soft" hidden></div>
+</div></div>
+</section>
 
 </main>
 <div id="bubble" role="status">Hi there! Welcome to my portfolio.<small>Thank you for visiting.</small></div>
 
 <script src="js/core.js"></script>
 <script src="js/home.js"></script>
+<script src="js/demos.js"></script>
 <script src="js/skills.js"></script>
 <script src="js/main.js"></script>
 </body>
