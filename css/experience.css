@@ -1,7 +1,9 @@
 /* experience: work wall on cyan */
 #experience{background:linear-gradient(180deg,var(--cy-1) 0%,#4cc6d6 45%,var(--cy-2) 100%);padding-block:130px 90px}
 .exp-title{font-family:var(--pop);font-weight:700;font-size:clamp(48px,7vw,96px);letter-spacing:-.02em;line-height:1;color:#fff;margin:0 0 36px;text-shadow:0 6px 30px rgba(0,70,90,.25)}
-.wall{columns:2 440px;column-gap:22px}
+.wall{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:start}
+@media (max-width:900px){.wall{grid-template-columns:1fr}}
+.wall .xt{margin-bottom:0}
 .xt{break-inside:avoid;margin-bottom:22px;border-radius:18px;overflow:hidden;background:#111;box-shadow:0 18px 40px rgba(0,60,80,.22);transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
 .xt:hover{transform:translateY(-6px) rotate(-.3deg);box-shadow:0 26px 50px rgba(0,60,80,.3)}
 .xinfo{padding:24px 26px 28px;color:#fff}
@@ -72,6 +74,8 @@
 @media (prefers-reduced-motion:reduce){.flow path{animation:none}}
 
 .edu-title{margin-top:40px}
+.skills-title{text-align:center;margin-bottom:28px!important}
+#skills{min-height:100svh}
 .edu-card{display:flex;align-items:center;gap:26px;flex-wrap:wrap;background:#111;color:#fff;border-radius:18px;padding:30px 32px;box-shadow:0 18px 40px rgba(0,60,80,.22)}
 .edu-ic{width:76px;height:76px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,#27B0C6,#86DBE6);flex:none}
 .edu-ic svg{width:46px;height:46px;fill:none;stroke:#0b2a31;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}

@@ -28,23 +28,23 @@ nav.top{position:fixed;left:0;right:0;top:0;z-index:30;padding-top:calc(env(safe
 .sig{justify-self:start;align-self:center;font-family:var(--sig);font-weight:400;font-size:46px;line-height:1;padding-top:6px;color:#fff;text-decoration:none;pointer-events:auto;white-space:nowrap}
 nav.top::before{content:"";position:fixed;left:0;right:0;top:0;height:calc(env(safe-area-inset-top,0px) + 118px);z-index:-1;pointer-events:none;-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);background:linear-gradient(to bottom,rgba(10,10,12,.82),rgba(10,10,12,.35));-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent);mask-image:linear-gradient(to bottom,#000 70%,transparent);opacity:0;transition:opacity .3s}
 nav.top.scrolled::before{opacity:1}
-body[data-page="experience"] nav.top::before{background:linear-gradient(to bottom,rgba(39,176,198,.55),rgba(39,176,198,.1))}
-body[data-page="skills"] nav.top::before{background:linear-gradient(to bottom,rgba(29,38,56,.6),rgba(29,38,56,.15))}
+body[data-zone="experience"] nav.top::before{background:linear-gradient(to bottom,rgba(39,176,198,.55),rgba(39,176,198,.1))}
+body[data-zone="skills"] nav.top::before{background:linear-gradient(to bottom,rgba(29,38,56,.6),rgba(29,38,56,.15))}
 @media (max-width:900px){nav.top::before{height:calc(env(safe-area-inset-top,0px) + 100px)}}
 .pill{grid-area:p;pointer-events:auto;display:flex;align-items:center;gap:30px;background:var(--pill);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:999px;padding:11px 42px;font-family:var(--pop);font-weight:400;font-size:16px}
 .pill a{text-decoration:none;color:#fff;padding:5px 14px;border-radius:999px;border:1px solid transparent;white-space:nowrap;transition:border-color .25s}
 .pill a:hover{border-color:rgba(255,255,255,.45)}
 .pill a.on{border-color:#fff}
-body[data-page="skills"] .pill{background:rgba(128,136,150,.78)}
-body[data-page="experience"] .pill{background:rgba(255,255,255,.28)}
+body[data-zone="skills"] .pill{background:rgba(128,136,150,.78)}
+body[data-zone="experience"] .pill{background:rgba(255,255,255,.28)}
 @media (max-width:1100px){nav.top{padding-inline:20px;gap:14px}.sig{font-size:36px}.pill{padding:10px 18px;gap:10px}}
 @media (max-width:900px){nav.top{display:flex;flex-direction:column;align-items:center;gap:4px;padding-inline:12px;padding-top:calc(env(safe-area-inset-top,0px) + 6px)}.sig{justify-self:center;font-size:32px;padding-top:2px}.pill{max-width:100%;overflow-x:auto;padding:7px 8px;font-size:13px;gap:0}.pill a{padding:4px 10px}}
 
 /* cursor */
 #cur{position:fixed;left:0;top:0;z-index:100;pointer-events:none;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:#fff;box-shadow:0 0 18px 6px rgba(255,255,255,.55);transition:width .25s,height .25s,margin .25s,background .25s,box-shadow .25s,opacity .3s;opacity:0}
 #cur.big{width:40px;height:40px;margin:-20px 0 0 -20px;background:rgba(255,255,255,.18)}
-body[data-page="skills"] #cur{background:var(--cyan);box-shadow:0 0 18px 6px rgba(92,217,232,.55)}
-body[data-page="skills"] #cur.big{background:rgba(92,217,232,.25)}
+body[data-zone="skills"] #cur{background:var(--cyan);box-shadow:0 0 18px 6px rgba(92,217,232,.55)}
+body[data-zone="skills"] #cur.big{background:rgba(92,217,232,.25)}
 body.cursor-on #cur{opacity:1}
 
 /* pages */
