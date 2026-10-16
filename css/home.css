@@ -28,7 +28,8 @@ main,footer{position:relative;z-index:2}
 .role-t .rw.final{color:#fff;text-shadow:0 0 18px rgba(255,255,255,.55);animation:rblink .3s steps(1) 3}
 .home-name .nm{display:inline-flex;flex-direction:column;align-items:flex-start}
 .home-name .role-t{font-family:var(--pop);font-weight:400;font-size:clamp(12px,1.1vw,16px);letter-spacing:.3em;text-transform:uppercase;color:#e9e9e9;text-shadow:0 2px 16px rgba(0,0,0,.8);margin:.55em 0 0 .1em;line-height:1.3}
-#home{height:230svh;position:relative}
+#home{position:relative}
+.home-hero{height:230svh;position:relative}
 .home-stick{position:sticky;top:0;height:100svh;display:flex;align-items:flex-end}
 .home-stick .col{max-width:1010px;padding-block:0 72px}
 .home-copy{opacity:0;transform:translateY(40px);will-change:opacity,transform}
@@ -49,8 +50,9 @@ main,footer{position:relative;z-index:2}
 .side-scroll.end .run,.side-scroll.end .chev{display:none}
 .side-scroll.end .lbl{color:rgba(255,255,255,.45)}
 @media (min-width:901px){.col{padding-right:96px}}
-body[data-page="experience"] .side-scroll .lbl{color:#fff}
-body[data-page="experience"] .side-scroll .trk{background:rgba(255,255,255,.35)}
+@media (max-width:900px){.col{padding-right:58px}}
+body[data-zone="experience"] .side-scroll .lbl{color:#fff}
+body[data-zone="experience"] .side-scroll .trk{background:rgba(255,255,255,.35)}
 @media (max-width:700px){.side-scroll{right:8px;padding:12px 8px}.side-scroll .trk{height:70px}.side-scroll .lbl{font-size:10.5px}#cars-scene .tiles{padding:80px 52px 10px 10px!important}}
 @media (prefers-reduced-motion:reduce){.side-scroll .run{animation:none;height:100%;opacity:.4}.side-scroll,.side-scroll .chev{animation:none}}
 .scroll-hint .m{width:26px;height:40px;border:1.5px solid #fff;border-radius:13px;display:flex;justify-content:center;padding-top:6px}

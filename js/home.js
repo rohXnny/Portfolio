@@ -31,20 +31,25 @@ function setGreet(on,left){
   bubble.classList.toggle("on",on&&current==="home");
 }
 function lightLoop(t){
+  try{lightStep(t)}catch(e){}
+  requestAnimationFrame(lightLoop);
+}
+function lightStep(t){
   const active=performance.now()-last<3000;
   if(!reduce&&!active){const s=t/1000;tx=860+520*Math.sin(s*.35);ty=470+170*Math.sin(s*.6)}
   lx+=(tx-lx)*(reduce?1:.12);ly+=(ty-ly)*(reduce?1:.12);
   holeC.setAttribute("cx",lx);holeC.setAttribute("cy",ly);warmC.setAttribute("cx",lx);warmC.setAttribute("cy",ly);
   const d=Math.hypot(tx-930,ty-470),left=tx<930;
-  if(current==="home"&&active&&(greeting?d<280:d<190)){if(!greeting||face.dataset.l!==String(left)){face.dataset.l=left;setGreet(true,left)}}
+  const bEl=document.getElementById("build"),hh=document.querySelector(".home-hero"),heroVis=scrollY<innerHeight*.3&&(!hh||hh.getBoundingClientRect().top>-innerHeight*.3)&&(!bEl||bEl.getBoundingClientRect().top>innerHeight*.9);
+  if(current==="home"&&active&&heroVis&&(greeting?d<280:d<190)){if(!greeting||face.dataset.l!==String(left)){face.dataset.l=left;setGreet(true,left)}}
   else if(greeting)setGreet(false,left);
   const dx=Math.max(-1,Math.min(1,(lx-930)/600));
   head.setAttribute("transform",greeting?`rotate(${left?-10:10} 930 540)`:`translate(${dx*7} ${Math.abs(dx)*2}) rotate(${dx*5} 930 540)`);
   if(greeting){const p=toScreen(left?860:1000,400);const bw=bubble.offsetWidth,bh=bubble.offsetHeight;
     const bx=left?Math.max(8,p.x-bw-10):Math.min(innerWidth-bw-8,p.x+10);bubble.style.left=bx+"px";bubble.style.top=Math.max(80,p.y-bh)+"px";
     bubble.style.borderRadius=left?"16px 16px 4px 16px":"16px 16px 16px 4px"}
-  requestAnimationFrame(lightLoop);
 }
+addEventListener("scroll",()=>{if(greeting&&scrollY>innerHeight*.3)setGreet(false,false)},{passive:true});
 requestAnimationFrame(lightLoop);
 
 
