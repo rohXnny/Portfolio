@@ -1,0 +1,92 @@
+/*
+  Design system: "late shift in a home office".
+  One dark world lit by a single warm source (the sunrise / desk lamp), with each
+  page keeping its own zone colour. Type does the heavy lifting:
+  Schibsted Grotesk for display, Geist for reading, Geist Mono for anything the
+  machine would say (labels, metrics, endpoints).
+  Layout: a 12-column grid inside a 1200px measure, 8px spacing rhythm,
+  hairlines instead of boxes wherever a box isn't needed.
+*/
+@import "@fontsource-variable/schibsted-grotesk";
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/geist-mono";
+@import "@fontsource/rock-salt/400.css";
+
+:root {
+  color-scheme: dark;
+
+  /* ink: neutrals with a faint warm bias toward the lamp light */
+  --ink-0: #0a0a0b;
+  --ink-1: #111113;
+  --ink-2: #17171a;
+  --ink-3: #1e1e22;
+  --line: rgb(255 255 255 / 0.08);
+  --line-2: rgb(255 255 255 / 0.14);
+  --line-3: rgb(255 255 255 / 0.28);
+
+  --text: #ededea;
+  --text-2: #a5a5a0;
+  --text-3: #6d6d69;
+
+  /* the one warm light source; used sparingly */
+  --sun: #f1c071;
+  --sun-soft: rgb(241 192 113 / 0.14);
+  --signal: #e3262b;
+
+  /* zone hues: one per industry, reused across Work, Strengths and the API */
+  --health: #6fd3be;
+  --bank: #9db1ff;
+  --edu: #f1c071;
+  --energy: #f29a7b;
+  --ok: #6fe3a5;
+  --warn: #f1c071;
+  --bad: #ff8a82;
+
+  /* Work zone (teal) and Skills zone (navy) */
+  --teal-0: #0f6f7c;
+  --teal-1: #1f9fb1;
+  --teal-2: #6cc9d5;
+  --teal-ink: #062a30;
+  --navy-0: #0b0f16;
+  --navy-1: #141b29;
+  --navy-2: #1d2638;
+  --navy-card: #111a2b;
+  --navy-line: #26324a;
+  --cyan: #5cd9e8;
+  --yellow: #f5c400;
+
+  /* type */
+  --display: "Schibsted Grotesk Variable", "Helvetica Neue", Arial, sans-serif;
+  --sans: "Geist Variable", "Segoe UI", system-ui, sans-serif;
+  --mono: "Geist Mono Variable", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --hand: "Rock Salt", "Comic Sans MS", cursive;
+
+  --fs-mega: clamp(3.5rem, 9.2vw, 9rem);      /* page titles */
+  --fs-h1: clamp(3rem, 6.4vw, 6rem);          /* hero lines */
+  --fs-h2: clamp(2.25rem, 4.6vw, 4.25rem);    /* section titles */
+  --fs-h3: clamp(1.5rem, 2.2vw, 2rem);        /* card titles */
+  --fs-lead: clamp(1.125rem, 1.45vw, 1.375rem);
+  --fs-body: 1.0625rem;
+  --fs-small: 0.875rem;
+  --fs-label: 0.71875rem;                     /* mono labels */
+
+  --track-tight: -0.035em;
+  --track-label: 0.14em;
+
+  /* space (8px rhythm) */
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px;
+  --s7: 48px; --s8: 64px; --s9: 96px; --s10: 136px;
+
+  --measure: 1200px;
+  --gutter: clamp(20px, 5vw, 72px);
+  --rail: 0px;                 /* space reserved for the scroll rail */
+
+  --r-1: 6px;
+  --r-2: 10px;
+  --r-3: 14px;
+
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --ease-spring: cubic-bezier(.2, .8, .3, 1.4);
+}
+
+@media (min-width: 901px) { :root { --rail: 40px; } }
