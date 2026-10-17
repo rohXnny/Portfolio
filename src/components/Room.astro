@@ -1,0 +1,132 @@
+---
+// The fixed, cursor-lit home office behind the Home page.
+---
+<div class="scene"><svg id="room" viewBox="0 -110 1600 1010" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A developer seen from behind, working late at a desk in a dark room with a glowing monitor, laptop and a cup of coffee">
+    <defs>
+      <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a1716"/><stop offset="1" stop-color="#110f0e"/></linearGradient>
+      <linearGradient id="night" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#101a2c"/><stop offset="1" stop-color="#1b2233"/></linearGradient>
+      <radialGradient id="bias" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#5f86ff" stop-opacity=".55"/><stop offset=".6" stop-color="#5f86ff" stop-opacity=".12"/><stop offset="1" stop-color="#5f86ff" stop-opacity="0"/></radialGradient>
+      <linearGradient id="scr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d1728"/><stop offset="1" stop-color="#0a1220"/></linearGradient>
+      <linearGradient id="deskTop" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b2521"/><stop offset="1" stop-color="#1e1a17"/></linearGradient>
+      <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9dbdff" stop-opacity=".7"/><stop offset="1" stop-color="#9dbdff" stop-opacity="0"/></linearGradient>
+      <radialGradient id="hole" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#000"/><stop offset=".55" stop-color="#000" stop-opacity=".75"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+      <radialGradient id="warm" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffcf96" stop-opacity=".30"/><stop offset="1" stop-color="#ffcf96" stop-opacity="0"/></radialGradient>
+      <linearGradient id="dayG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fc8ff"/><stop offset="1" stop-color="#ffd9a3"/></linearGradient>
+      <linearGradient id="beamW" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd9a0" stop-opacity=".55"/><stop offset="1" stop-color="#ffd9a0" stop-opacity="0"/></linearGradient>
+      <clipPath id="screenClip"><rect x="652" y="242" width="556" height="306" rx="3"/></clipPath>
+      <mask id="dark" maskUnits="userSpaceOnUse" x="-420" y="-110" width="2020" height="1010">
+        <rect x="-420" y="-110" width="2020" height="1010" fill="#fff"/>
+        <ellipse cx="930" cy="420" rx="520" ry="330" fill="url(#hole)" opacity=".75"/>
+        <circle id="holeC" cx="1150" cy="560" r="330" fill="url(#hole)"/>
+      </mask>
+    </defs>
+
+    <!-- wall and window -->
+    <rect x="-420" y="-110" width="2020" height="1010" fill="url(#wall)"/>
+    <g>
+      <rect x="92" y="112" width="330" height="360" rx="4" fill="#0c0b0b"/>
+      <rect x="104" y="124" width="306" height="336" fill="url(#night)"/>
+      <g fill="#ffd9a0" opacity=".55">
+        <rect x="130" y="380" width="6" height="8"/><rect x="150" y="360" width="6" height="8"/><rect x="190" y="395" width="6" height="8"/><rect x="240" y="350" width="6" height="8"/><rect x="262" y="372" width="6" height="8"/><rect x="310" y="340" width="6" height="8"/><rect x="330" y="388" width="6" height="8"/><rect x="372" y="366" width="6" height="8"/>
+      </g>
+      <path d="M104 460V360h40v-40h36v60h30v-90h44v70h36v-40h40v80h34v-30h46v90z" fill="#0b0f18"/>
+      <g id="day" opacity="0"><rect x="104" y="124" width="306" height="336" fill="url(#dayG)"/><circle cx="330" cy="205" r="62" fill="#ffd98a" opacity=".4"/><circle cx="330" cy="205" r="30" fill="#fff4d6"/></g>
+      <g stroke="#0c0b0b" stroke-width="3" opacity=".9"><path d="M104 150h306M104 180h306M104 210h306M104 240h306M104 270h306"/></g>
+      <rect x="252" y="124" width="6" height="336" fill="#0c0b0b"/>
+      <circle cx="350" cy="170" r="14" fill="#dfe6ff" opacity=".35"/>
+    </g>
+    <!-- shelf -->
+    <g>
+      <rect x="1250" y="250" width="270" height="10" fill="#241f1c"/>
+      <rect x="1270" y="196" width="16" height="54" fill="#3a2f2a"/><rect x="1290" y="206" width="14" height="44" fill="#2c3440"/><rect x="1308" y="190" width="18" height="60" fill="#40302a"/><rect x="1330" y="212" width="12" height="38" fill="#2a2522"/>
+      <path d="M1440 250c-4-30 6-44 20-52-2 18 4 28 14 30-10 6-12 14-10 22z" fill="#1f2a22"/><rect x="1440" y="232" width="34" height="18" rx="3" fill="#2d2622"/>
+    </g>
+
+    <!-- bias light behind monitor -->
+    <ellipse cx="930" cy="400" rx="470" ry="230" fill="url(#bias)"/>
+
+    <!-- desk -->
+    <rect x="-420" y="612" width="1980" height="22" fill="url(#deskTop)"/>
+    <rect x="-420" y="634" width="1980" height="30" fill="#161311"/>
+    <rect x="110" y="664" width="26" height="236" fill="#141110"/><rect x="1464" y="664" width="26" height="236" fill="#141110"/>
+
+    <!-- monitor -->
+    <rect x="910" y="556" width="40" height="46" fill="#151314"/>
+    <ellipse cx="930" cy="610" rx="96" ry="8" fill="#1a1818"/>
+    <rect x="640" y="230" width="580" height="330" rx="10" fill="#0b0a0a"/>
+    <rect x="652" y="242" width="556" height="306" rx="3" fill="url(#scr)"/>
+    <g clip-path="url(#screenClip)">
+      <g id="code" font-family="JetBrains Mono,monospace" font-size="12"></g>
+      <rect x="652" y="242" width="556" height="20" fill="#121c2e"/>
+      <circle cx="666" cy="252" r="4" fill="#ee8a68"/><circle cx="680" cy="252" r="4" fill="#edb45a"/><circle cx="694" cy="252" r="4" fill="#5cc8b4"/>
+      <text x="720" y="256" font-family="JetBrains Mono,monospace" font-size="10" fill="#6d7fa3">OrderAllocationController.java</text>
+    </g>
+    <rect x="652" y="242" width="556" height="306" rx="3" fill="#7fb2ff" opacity=".04"/>
+
+    <!-- laptop -->
+    <path d="M430 604l22-118h172l-10 118z" fill="#0d0c0c"/>
+    <path d="M440 596l18-100h156l-8 100z" fill="#0b1a14"/>
+    <g font-family="JetBrains Mono,monospace" font-size="9" fill="#5cc8b4" opacity=".9">
+      <text x="466" y="516">$ kubectl get pods</text><text x="464" y="532" fill="#6f8f84">order-svc   Running</text><text x="462" y="548" fill="#6f8f84">payments    Running</text><text x="460" y="564" fill="#6f8f84">kafka-0     Running</text><text x="458" y="582">$ <tspan class="caret">▍</tspan></text>
+    </g>
+    <path d="M410 604h230l12 10H398z" fill="#1b1918"/>
+
+    <!-- keyboard + mouse -->
+    <rect x="780" y="598" width="250" height="14" rx="3" fill="#0f0e0e"/>
+    <rect x="786" y="610" width="238" height="2" fill="#8fa6ff" opacity=".5"/>
+    <ellipse cx="1076" cy="606" rx="14" ry="7" fill="#0f0e0e"/>
+
+    <!-- coffee -->
+    <g>
+      <rect x="1196" y="556" width="48" height="56" rx="7" fill="#2a2320"/>
+      <path d="M1244 570c20 0 20 30 0 30" fill="none" stroke="#2a2320" stroke-width="7"/>
+      <ellipse cx="1220" cy="558" rx="24" ry="5" fill="#140d09"/>
+      <path d="M1200 562v40" stroke="#ffcf96" stroke-opacity=".18" stroke-width="3"/>
+      <g id="steam" fill="none" stroke="#e9e1d8" stroke-width="3" stroke-linecap="round">
+        <path d="M1212 548c-10-16 10-26 0-44s8-26 0-40"/>
+        <path d="M1224 548c-10-18 12-26 2-46s8-24 0-40"/>
+        <path d="M1234 548c-8-14 8-22 0-38s6-22 0-34"/>
+      </g>
+    </g>
+    <!-- plant -->
+    <g><rect x="1370" y="560" width="54" height="52" rx="6" fill="#262120"/>
+      <path d="M1396 562c-30-40-44-70-30-96 10 30 22 48 30 60M1398 562c6-50 24-80 50-90-14 30-26 60-40 92M1394 562c-20-20-50-30-70-24 26 8 44 16 62 30" fill="#1b2a20"/></g>
+
+    <!-- person, from behind -->
+    <g id="person">
+      <path d="M760 900c-6-150 20-262 108-300l124 0c88 38 114 150 108 300z" fill="#171313"/>
+      <path d="M868 600c-60 26-88 90-100 170" fill="none" stroke="url(#rim)" stroke-width="3"/>
+      <path d="M992 600c60 26 88 90 100 170" fill="none" stroke="url(#rim)" stroke-width="3"/>
+      <rect x="906" y="530" width="48" height="76" rx="18" fill="#1d1715"/>
+      <g id="head">
+        <ellipse cx="930" cy="476" rx="60" ry="72" fill="#1c1614"/>
+        <g id="face" opacity="0">
+          <ellipse cx="948" cy="484" rx="46" ry="60" fill="#7a5140"/>
+          <ellipse cx="896" cy="482" rx="9" ry="15" fill="#6a4535"/>
+          <path d="M930 462 q10 -6 20 0 M962 464 q8 -5 16 0" stroke="#1a100c" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <circle cx="940" cy="476" r="4" fill="#120a07"/><circle cx="970" cy="478" r="4" fill="#120a07"/>
+          <path d="M960 482 q9 12 0 18" stroke="#4f3226" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M938 514 q14 10 30 0" stroke="#2a1510" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <path d="M992 450 C998 480 994 512 980 536" stroke="#9dbdff" stroke-opacity=".5" stroke-width="2.5" fill="none"/>
+        </g>
+        <path d="M870 470c-4-58 30-86 62-86s66 24 60 86c-8-26-30-40-60-40s-52 12-62 40z" fill="#0e0b0a"/>
+        <path d="M872 470c0-66 116-66 116 0" fill="none" stroke="#0a0909" stroke-width="10"/>
+        <rect x="858" y="458" width="22" height="48" rx="10" fill="#0c0b0b"/><rect x="980" y="458" width="22" height="48" rx="10" fill="#0c0b0b"/>
+        <path d="M876 420c20-34 88-34 108 0" fill="none" stroke="#9dbdff" stroke-opacity=".45" stroke-width="2.5"/>
+      </g>
+    </g>
+    <g id="waveSide"><g id="wave" opacity="0">
+      <path d="M1040 630 C1066 590 1082 540 1088 488" stroke="#1c1614" stroke-width="28" stroke-linecap="round" fill="none"/>
+      <circle cx="1090" cy="468" r="20" fill="#7a5140"/>
+      <path d="M1076 452 l-4 -16 M1086 448 l0 -18 M1096 448 l3 -17 M1105 455 l7 -13" stroke="#7a5140" stroke-width="7" stroke-linecap="round"/>
+    </g></g>
+    <!-- chair -->
+    <path d="M770 900V700c0-40 30-64 70-64h180c40 0 70 24 70 64v200z" fill="#0d0b0b"/>
+    <path d="M790 700c0-30 20-48 54-48h172c34 0 54 18 54 48" fill="none" stroke="#2a2524" stroke-width="2"/>
+
+    <!-- darkness, lifted by the monitor and by the cursor -->
+    <rect id="darkR" x="-420" y="-110" width="2020" height="1010" fill="#050404" opacity=".9" mask="url(#dark)"/>
+    <polygon id="beam" points="104,124 410,124 1180,900 470,900" fill="url(#beamW)" opacity="0" style="mix-blend-mode:screen"/>
+    <rect id="ambient" x="-420" y="-110" width="2020" height="1010" fill="#ffcf96" opacity="0" style="mix-blend-mode:screen"/>
+    <circle id="warmC" cx="1150" cy="560" r="300" fill="url(#warm)" style="mix-blend-mode:screen"/>
+  </svg></div>

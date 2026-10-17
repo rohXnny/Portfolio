@@ -1,0 +1,39 @@
+---
+/**
+ * An outlined skill badge: one of four shapes with a short code inside.
+ * Shared by the project cards and the Skills section so both read as one system.
+ */
+import type { Shape } from "../data/projects";
+
+interface Props {
+  shape: Shape;
+  code: string;
+}
+
+const { shape, code } = Astro.props;
+
+const lines = code.split("\n");
+const fontSize = lines.length > 1 ? 18 : code.length <= 3 ? 28 : code.length === 4 ? 22 : 18;
+const y = (i: number) => 56 + (i - (lines.length - 1) / 2) * 22;
+---
+<svg viewBox="0 0 112 112" aria-hidden="true">
+  {shape === "hex" && <>
+    <path class="sh" d="M56 4 L101 30 L101 82 L56 108 L11 82 L11 30 Z" />
+    <path class="sh2" d="M56 13 L93 35 L93 77 L56 99 L19 77 L19 35 Z" />
+  </>}
+  {shape === "circle" && <>
+    <circle class="sh" cx="56" cy="56" r="50" />
+    <circle class="sh2" cx="56" cy="56" r="42" />
+  </>}
+  {shape === "shield" && <>
+    <path class="sh" d="M16 16 L96 16 L90 86 L56 104 L22 86 Z" />
+    <path class="sh2" d="M24 23 L88 23 L83 81 L56 96 L29 81 Z" />
+  </>}
+  {shape === "sq" && <>
+    <rect class="sh" x="8" y="8" width="96" height="96" rx="6" />
+    <rect class="sh2" x="15" y="15" width="82" height="82" rx="3" />
+  </>}
+  {lines.map((l, i) => (
+    <text x="56" y={y(i)} text-anchor="middle" dominant-baseline="central" font-size={fontSize}>{l}</text>
+  ))}
+</svg>

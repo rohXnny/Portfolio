@@ -1,0 +1,43 @@
+---
+// Break my system: live sandbox markup. Behaviour lives in scripts/sandbox.ts.
+---
+    <header class="sh sys-head" id="sys">
+      <div class="sh-meta"><span class="k">02 · How I work</span><span class="rule"></span><span>Simulated · runs in your browser</span></div>
+      <h2 class="sh-title md">Break my system.</h2>
+      <p class="sh-lead">A small live system I designed. Throw real failures at it and watch it scale, fail over and heal, with an AI agent on call explaining every move.</p>
+    </header>
+
+    <div class="sx" id="sx">
+      <div class="sx-top">
+        <span class="sx-dots"><i></i><i></i><i></i></span>
+        <span class="sx-name">sandbox <em>· simulated, runs in your browser</em></span>
+        <span class="sx-status ok" id="sx-status">Healthy</span>
+        <div class="sx-metrics">
+          <span><small>Throughput</small><b id="m-rps">1.2k</b><em>req/s</em></span>
+          <span><small>p95 latency</small><b id="m-p95">120</b><em>ms</em></span>
+          <span><small>Errors</small><b id="m-err">0.00</b><em>%</em></span>
+          <span><small>Writes lost</small><b id="m-lost">0</b></span>
+          <svg class="sx-spark" id="m-spark" viewBox="0 0 120 30" preserveAspectRatio="none" aria-hidden="true"><polyline id="m-line" fill="none" stroke="#6FD3BE" stroke-width="2" points=""/></svg>
+        </div>
+      </div>
+      <div class="sx-body">
+        <div class="sx-map">
+          <svg id="sx-svg" viewBox="0 0 760 400" role="img" aria-label="Live system map: users, load balancer, app servers, cache, queue and a three-node database cluster"></svg>
+          <div class="sx-legend"><span><i style="background:#9DB1FF"></i>read</span><span><i style="background:#F1C071"></i>write</span><span><i style="background:#ff7b72"></i>error</span><span><i style="background:#6FD3BE"></i>replication</span></div>
+        </div>
+        <div class="sx-agent">
+          <div class="sx-agent-h"><span class="pulse"></span>On-call AI agent<em>plans · calls tools · asks before risky moves</em></div>
+          <ol class="trace" id="sx-trace" aria-live="polite"><li class="idle">All quiet. Pick a failure below and I'll handle it.</li></ol>
+        </div>
+      </div>
+      <div class="sx-ctl">
+        <div class="sx-btns">
+          <button class="sxb" type="button" data-x="spike"><b>10× traffic spike</b><span>Scale out without falling over</span></button>
+          <button class="sxb" type="button" data-x="kill"><b>Kill the database leader</b><span>Fail over with zero data loss</span></button>
+          <button class="sxb" type="button" data-x="split"><b>Split the network</b><span>Keep one source of truth</span></button>
+          <button class="sxb" type="button" data-x="deploy"><b>Ship a bad release</b><span>Catch it before users do</span></button>
+          <button class="sxb reset" type="button" data-x="reset"><b>Reset</b><span>Back to calm</span></button>
+        </div>
+        <div class="sx-skills" id="sx-skills"><span data-k="design">System design</span><span data-k="dist">Distributed systems</span><span data-k="scale">Scalability</span><span data-k="ai">AI agents</span></div>
+      </div>
+    </div>

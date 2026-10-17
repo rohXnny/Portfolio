@@ -1,0 +1,74 @@
+---
+// Beyond Code: the drive, the cars and the caffeine chase.
+---
+<section class="page" id="beyond" data-page="beyond" hidden>
+  <div class="story" id="car-scene" style="height:190vh"><div class="sticky">
+    <div id="road"></div>
+    <div class="side-say l" id="say-l">Fast cars.</div>
+    <div class="side-say r" id="say-r">Clean code.</div>
+    <div id="topcar">
+      <svg viewBox="0 0 200 420" role="img" aria-label="Line drawing of a car seen from above, driving up the road">
+        <defs><linearGradient id="beamG" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+        <path class="beam" d="M58 36 L-10 -300 L95 -300 L78 36Z"/><path class="beam" d="M142 36 L105 -300 L210 -300 L122 36Z"/>
+        <rect x="38" y="78" width="16" height="50" rx="5" fill="#fff"/><rect x="146" y="78" width="16" height="50" rx="5" fill="#fff"/>
+        <rect x="38" y="298" width="16" height="54" rx="5" fill="#fff"/><rect x="146" y="298" width="16" height="54" rx="5" fill="#fff"/>
+        <path class="o" d="M60 30 C60 12 80 4 100 4 C120 4 140 12 140 30 L150 120 C152 150 152 280 150 340 C148 390 130 410 100 410 C70 410 52 390 50 340 C48 280 48 150 50 120 Z"/>
+        <path class="l" d="M64 122 C80 110 120 110 136 122 L130 170 C115 164 85 164 70 170 Z"/>
+        <path class="l" d="M70 180 C85 174 115 174 130 180 L130 268 C115 274 85 274 70 268 Z"/>
+        <path class="l" d="M72 282 C88 288 112 288 128 282 L132 322 C115 332 85 332 68 322 Z"/>
+        <path class="l" d="M80 30 L78 104 M120 30 L122 104"/>
+        <path class="l" d="M50 138 L34 144 L36 157 L50 155 M150 138 L166 144 L164 157 L150 155"/>
+        <path class="l" d="M62 32 L82 22 M138 32 L118 22"/>
+        <path d="M62 396 L82 404 M138 396 L118 404" stroke="#E3262B" stroke-width="4" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="car-cap" id="car-cap"><i></i><div class="cc"><b>Scroll down to drive</b><span>and get to know more about me</span></div></div>
+  </div></div>
+
+  <div class="story" id="cars-scene" style="height:200vh"><div class="sticky">
+    <div class="tiles" id="tiles">
+      <div class="tile" style="--g:linear-gradient(135deg,#123f84,#07162f)"><svg viewBox="0 0 1000 400"><use href="#carShape"/><use href="#wheelsS"/></svg><div class="brand">BMW</div><div class="mdl">M5</div></div>
+      <div class="tile" style="--g:linear-gradient(135deg,#63228a,#1a0826)"><svg viewBox="0 0 1000 400"><use href="#carShape"/><use href="#wheelsS"/></svg><div class="brand">BMW</div><div class="mdl">M8</div></div>
+      <div class="tile" style="--g:linear-gradient(135deg,#3f4a3a,#0f130d)"><svg viewBox="0 0 1000 400"><use href="#suvShape"/><use href="#wheelsS"/></svg><div class="brand">Mercedes-AMG</div><div class="mdl">G-Wagen</div></div>
+      <div class="tile" style="--g:linear-gradient(135deg,#d2661a,#3a1605)"><svg viewBox="0 0 1000 400"><use href="#hyperShape"/><use href="#wheelsS"/></svg><div class="brand">McLaren</div><div class="mdl">Senna</div></div>
+    </div>
+    <h2 class="big-line">I drive and dream about<span class="hand">Fast</span>cars..</h2>
+  </div></div>
+
+  <div class="quote"><blockquote class="reveal-q">
+    <span class="qm" aria-hidden="true">“</span>
+    <p>Great cars and great software are built the same way: <em>precise engineering, tested at the limit, trusted to perform when it matters.</em></p>
+    <cite>Rohit Annavarapu</cite>
+  </blockquote></div>
+
+  <div class="story" id="fuel-scene" style="height:190vh"><div class="sticky">
+    <p class="say" id="say"><span>I run on </span><span class="w0" data-i="0">caffeine</span><span class="w0" data-i="1">, new skills</span><span class="w0" data-i="2"> and new AI tools.</span></p>
+    <div class="track" id="track">
+      <div class="ground"></div>
+      <div class="chip" data-c="0">new skills</div>
+      <div class="chip" data-c="1">new AI tools</div>
+      <div class="chip" data-c="2">new ideas</div>
+      <div id="cup">
+        <svg viewBox="0 0 170 215" role="img" aria-label="A running coffee cup">
+          <path class="red" d="M58 48 C46 32 70 24 58 6"/><path class="red" d="M82 48 C70 30 94 22 82 2"/><path class="red" d="M106 48 C94 32 118 24 106 6"/>
+          <path class="s" d="M8 104 L-10 96 M8 104 L-6 118" opacity=".5"/>
+          <path class="s" d="M36 62 L36 142 Q36 162 56 162 L112 162 Q132 162 132 142 L132 62 Z"/>
+          <path class="s" d="M132 82 C166 82 166 132 132 132"/>
+          <circle cx="68" cy="100" r="4.5" fill="#fff"/><circle cx="100" cy="100" r="4.5" fill="#fff"/>
+          <path class="s" d="M70 120 Q84 132 98 120"/>
+          <path class="s arm" id="arm1" d="M36 110 L12 124"/>
+          <line class="s leg" id="leg1" x1="66" y1="162" x2="60" y2="208"/>
+          <line class="s leg" id="leg2" x1="102" y1="162" x2="108" y2="208"/>
+        </svg>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="bio"><div class="col">
+    <h2>Engineer by trade, learner by habit.</h2>
+    <div>
+    <p>I started out building pricing and inventory systems for a fuel retail network, went on to earn my Master's in Computer Science, and have since worked on student registration, payment processing and pharmaceutical orders. I'm happiest designing the backend: the APIs, the data and the events that tie services together, built to fail safely and recover cleanly.</p>
+    <div class="edu"><b>Master of Science, Computer Science</b></div>
+    </div>
+  </div></div>
+</section>

@@ -1,0 +1,22 @@
+---
+/** Page chrome: navigation, custom cursor and the scroll rail. */
+const links = [
+  { href: "#home", label: "Home" },
+  { href: "#work", label: "Work" },
+  { href: "#beyond", label: "Beyond Code" },
+  { href: "#hire", label: "Strengths" },
+  { href: "#contact", label: "Contact" },
+];
+---
+<div id="cur" aria-hidden="true"></div>
+<div class="side-scroll" id="scroll-hint" aria-hidden="true">
+  <span class="lbl">Scroll</span>
+  <span class="trk"><i class="run"></i><i class="fill" id="scroll-fill"></i></span>
+  <svg class="chev" viewBox="0 0 14 14"><path d="M2 4l5 5 5-5" /></svg>
+</div>
+<nav class="top" id="nav" aria-label="Primary">
+  <div class="navbar" id="pill">
+    {links.map((l, i) => <a href={l.href} class:list={{ on: i === 0 }}>{l.label}</a>)}
+    <span class="avail"><i></i>Open to SDE roles</span>
+  </div>
+</nav>

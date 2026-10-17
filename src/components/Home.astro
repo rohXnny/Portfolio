@@ -1,0 +1,36 @@
+---
+/** Home: the lit room, name and rolling role, then the API console and sandbox. */
+import ApiConsole from "./ApiConsole.astro";
+import Sandbox from "./Sandbox.astro";
+---
+<section class="page" id="home" data-page="home">
+  <div class="home-hero">
+    <div class="home-stick">
+      <h2 class="home-name" id="home-name">
+        <span class="nm">
+          <span>Rohit Annavarapu</span>
+          <span class="role-t"><span class="roll" id="roll"><span class="rw cur">Full Stack</span></span><span class="se">Software Engineer</span></span>
+        </span>
+      </h2>
+      <div class="home-scrim" id="home-scrim" aria-hidden="true"></div>
+      <div class="col">
+        <div class="home-copy" id="home-copy">
+          <span class="label">Welcome in</span>
+          <h1 class="hello">Hello there.</h1>
+          <p>I'm Rohit Annavarapu, a full stack software engineer. I've built software for companies in healthcare, banking, higher education and energy. Ask me anything like an API, test my problem solving below, see my work, and find out what drives me beyond code. If we align, you'll find my details under Contact.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="build" id="build" role="region" aria-label="Ask me like an API and Break my system">
+    <div class="col">
+      <ApiConsole />
+      <Sandbox />
+      <div class="build-cta">
+        <p>That's how I think. See where I've applied it.</p>
+        <a class="btn btn-primary" href="#work">See my work <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>

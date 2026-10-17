@@ -1,0 +1,37 @@
+---
+import Base from "../layouts/Base.astro";
+import Room from "../components/Room.astro";
+import Chrome from "../components/Chrome.astro";
+import SvgDefs from "../components/SvgDefs.astro";
+import Home from "../components/Home.astro";
+import Work from "../components/Work.astro";
+import Beyond from "../components/Beyond.astro";
+import Strengths from "../components/Strengths.astro";
+import Contact from "../components/Contact.astro";
+---
+<Base>
+  <Room />
+  <Chrome />
+  <SvgDefs />
+  <main id="top">
+    <Home />
+    <Work />
+    <Beyond />
+    <Strengths />
+    <Contact />
+  </main>
+  <div class="toast" id="toast" hidden></div>
+  <div id="bubble" role="status">Hi there! Welcome to my portfolio.<small>Thank you for visiting.</small></div>
+
+  <script>
+    // Order matters: feature modules register page listeners before the router boots.
+    import "../scripts/shared";
+    import "../scripts/chrome";
+    import "../scripts/home";
+    import "../scripts/demos";
+    import "../scripts/skills";
+    import "../scripts/beyond";
+    import "../scripts/contact";
+    import "../scripts/router";
+  </script>
+</Base>

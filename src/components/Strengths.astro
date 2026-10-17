@@ -1,0 +1,50 @@
+---
+/** Strengths: the career path across industries and the reasons to hire. */
+import { projects, careerOrder } from "../data/projects";
+
+const byId = Object.fromEntries(projects.map((p) => [p.id, p]));
+const reasons = [
+  { tag: "Range", title: "Four industries, no reset", body: "I moved from fuel retail to universities to banking to healthcare. Each came with new rules, new users and new regulations, and each time I was delivering within weeks." },
+  { tag: "Adaptability", title: "I adapt to any stack", body: "Backend or front end, on-premises or cloud, one language or another. I learn what the team already uses instead of asking the team to change." },
+  { tag: "Reliability", title: "Built for high-stakes systems", body: "Payments, prescriptions and student records taught me to design for security, compliance and systems that recover on their own." },
+  { tag: "AI adoption", title: "Early on new technology", body: "I bring new tools, including AI, into real work quickly and responsibly, with testing and review deciding what ships." },
+];
+---
+<section class="page hirepg" id="hire" data-page="hire" hidden>
+  <div class="col">
+    <header class="sh">
+      <div class="sh-meta"><span class="k">Strengths</span><span class="rule"></span><span>{careerOrder.length} industries</span></div>
+      <h2 class="sh-title">Strengths</h2>
+    </header>
+
+    <blockquote class="hq">
+      <p><span class="q">“</span>The best engineers aren't defined by one stack or one industry. <em>They're defined by how fast they master the next one.</em><span class="q">”</span></p>
+    </blockquote>
+
+    <div class="journey" aria-label="Career path across four industries">
+      <div class="jline"></div>
+      {careerOrder.map((id, i) => (
+        <div class={`jstop d-${id}`}>
+          <span class="dot"></span>
+          <span class="n">{String(i + 1).padStart(2, "0")}</span>
+          <b>{byId[id].industry}</b>
+          <small>{byId[id].title}</small>
+        </div>
+      ))}
+    </div>
+
+    <div class="reasons">
+      {reasons.map((r) => (
+        <div class="rs"><span class="tag">{r.tag}</span><h4>{r.title}</h4><p>{r.body}</p></div>
+      ))}
+    </div>
+
+    <div class="cta">
+      <div>
+        <h3 class="talk">Sounds like a fit?</h3>
+        <p>Let's talk about your team and what you're building.</p>
+      </div>
+      <a class="btn btn-primary" href="#contact">Get in touch <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+---
+// Ask me like an API. Responses are defined in scripts/api.ts.
+---
+    <header class="sh">
+      <div class="sh-meta"><span class="k">01 · Who I am</span><span class="rule"></span><span>6 endpoints</span></div>
+      <h2 class="sh-title md" id="api-h">Ask me like an API.</h2>
+      <p class="sh-lead">Pick an endpoint to see who I am, what I build and how I work.</p>
+    </header>
+    <div class="apix">
+      <div class="apix-eps" role="tablist" aria-label="Endpoints">
+        <button class="ep on" type="button" data-ep="me"><b class="get">GET</b>/rohit</button>
+        <button class="ep" type="button" data-ep="strengths"><b class="get">GET</b>/rohit/strengths</button>
+        <button class="ep" type="button" data-ep="ai"><b class="get">GET</b>/rohit/ai</button>
+        <button class="ep" type="button" data-ep="stack"><b class="get">GET</b>/rohit/stack</button>
+        <button class="ep hot" type="button" data-ep="practice"><b class="get">GET</b>/rohit/in-practice</button>
+        <button class="ep" type="button" data-ep="hire"><b class="post">POST</b>/rohit/hire</button>
+      </div>
+      <div class="apix-res">
+        <div class="apix-bar"><span id="apix-req">GET /rohit</span><span id="apix-status" class="ok">200 OK</span></div>
+        <pre class="apix-body" id="apix-body" aria-live="polite"></pre>
+        <div class="apix-cta" id="apix-cta" hidden><button type="button" id="go-sys">Break my system ↓</button></div>
+      </div>
+    </div>

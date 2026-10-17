@@ -1,0 +1,78 @@
+---
+/** Work: projects by industry, education, and the skills board. */
+import Badge from "./Badge.astro";
+import Health from "./mocks/Health.astro";
+import Bank from "./mocks/Bank.astro";
+import Edu from "./mocks/Edu.astro";
+import Energy from "./mocks/Energy.astro";
+import { projects, SHAPE_ORDER } from "../data/projects";
+
+const mocks = { health: Health, bank: Bank, edu: Edu, energy: Energy } as const;
+const industries = new Set(projects.map((p) => p.industry)).size;
+---
+<section class="page" id="work" data-page="work" hidden>
+  <div class="zone" id="experience" data-zone="experience">
+    <div class="col">
+      <header class="sh">
+        <div class="sh-meta"><span class="k">Work</span><span class="rule"></span><span>{projects.length} projects · {industries} industries</span></div>
+        <h2 class="sh-title">Projects</h2>
+        <p class="sh-lead">Software I've built across healthcare, banking, higher education and energy.</p>
+      </header>
+
+      <div class="wall">
+        {projects.map((p) => {
+          const Mock = mocks[p.id];
+          return (
+            <article class:list={["xt", `d-${p.id}`, { light: p.surface === "light" }]}>
+              <Mock />
+              <div class="xinfo">
+                <span class="dom">{p.industry}</span>
+                <h3>{p.title}</h3>
+                <div class="xs-h">Strong in</div>
+                <ul class="xs">
+                  {p.skills.map((s, i) => (
+                    <li tabindex="0" role="button" aria-label={s.name} data-n={s.name}>
+                      <Badge shape={SHAPE_ORDER[i % SHAPE_ORDER.length]} code={s.code} />
+                    </li>
+                  ))}
+                </ul>
+                <div class="xs-detail" aria-live="polite"><b></b></div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+
+      <div class="edu-block">
+        <header class="sh">
+          <div class="sh-meta"><span class="k">Education</span><span class="rule"></span></div>
+        </header>
+        <article class="edu-card">
+          <div class="edu-ic" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M4 24 32 10l28 14-28 14z" /><path d="M16 30v14c8 6 24 6 32 0V30" /><path d="M60 24v16" /><circle cx="60" cy="42" r="2.5" /></svg>
+          </div>
+          <div class="edu-txt"><span class="dom">Graduate degree</span><h3>Master of Science, Computer Science</h3></div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="zone" id="skills" data-zone="skills">
+    <div class="col">
+      <header class="sh">
+        <div class="sh-meta"><span class="k">Skills</span><span class="rule"></span><span>Tools I ship with</span></div>
+        <h2 class="sh-title">Skills</h2>
+        <div class="toggle" role="group" aria-label="Skill type">
+          <label for="sw" id="lbl-tech" class="on">Technology</label>
+          <button class="switch" id="sw" role="switch" aria-checked="false" aria-labelledby="lbl-tech lbl-soft"><i></i></button>
+          <label for="sw" id="lbl-soft">Collaboration</label>
+        </div>
+      </header>
+      <div id="tech" class="skills-stage">
+        <div class="icons" id="icons"></div>
+        <div class="tdesc" aria-live="polite"><span class="label">Technology</span><h3 id="t-name"></h3><p id="t-text"></p></div>
+      </div>
+      <div id="soft" class="soft" hidden></div>
+    </div>
+  </div>
+</section>
