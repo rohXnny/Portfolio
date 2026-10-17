@@ -87,14 +87,14 @@ requestAnimationFrame(lightLoop);
 })();
 
 /* ---------- home: sunlight on scroll ---------- */
-const dayG=document.getElementById("day"),beam=document.getElementById("beam"),darkR=document.getElementById("darkR"),amb=document.getElementById("ambient"),homeCopy=document.getElementById("home-copy"),hint=document.getElementById("scroll-hint");
+const dayG=document.getElementById("day"),beam=document.getElementById("beam"),darkR=document.getElementById("darkR"),amb=document.getElementById("ambient"),homeCopy=document.getElementById("home-copy"),homeScrim=document.getElementById("home-scrim"),hint=document.getElementById("scroll-hint");
 function home(){
   if(current!=="home")return;
   const p=Math.max(0,Math.min(1,scrollY/(innerHeight*1.1)));
   dayG.setAttribute("opacity",p);beam.setAttribute("opacity",p*.95);amb.setAttribute("opacity",p*.07);
   darkR.setAttribute("opacity",.9*(1-.72*p));
   const q=Math.max(0,Math.min(1,(p-.4)/.35));
-  homeCopy.style.opacity=q;homeCopy.style.transform=`translateY(${(1-q)*40}px)`;
+  homeCopy.style.opacity=q;homeScrim.style.opacity=q;homeCopy.style.transform=`translateY(${(1-q)*40}px)`;
   
   const hn=document.getElementById("home-name");const f=Math.max(0,Math.min(1,p/.35));hn.style.opacity=1-f;hn.style.visibility=f>=1?"hidden":"visible";hn.style.transform=`translateY(${-f*40}px)`;
 }
