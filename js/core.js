@@ -11,7 +11,7 @@ if(fine){
   let x=-100,y=-100,px=x,py=y;
   addEventListener("pointermove",e=>{if(e.pointerType!=="mouse")return;x=e.clientX;y=e.clientY;document.body.classList.add("cursor-on")},{passive:true});
   document.addEventListener("mouseleave",()=>document.body.classList.remove("cursor-on"));
-  document.addEventListener("pointerover",e=>{cur.classList.toggle("big",!!e.target.closest("a,button,.sc,.ic"))});
+  document.addEventListener("pointerover",e=>{const r=!!e.target.closest(".xs li");cur.classList.toggle("dark",!!e.target.closest(".xt.light,.edu-card.light,.sn-m.me,.toast"));cur.classList.toggle("ring",r);cur.classList.toggle("big",!r&&!!e.target.closest("a,button,.sc,.ic"))});
   (function f(){px+=(x-px)*(reduce?1:.25);py+=(y-py)*(reduce?1:.25);cur.style.transform=`translate(${px}px,${py}px)`;requestAnimationFrame(f)})();
 }
 

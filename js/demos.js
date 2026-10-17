@@ -6,7 +6,7 @@
 
   /* ===== Ask me like an API ===== */
   const EP={
-    me:["GET","/rohit","200 OK",{name:"Rohit Annavarapu",role:"Full Stack Software Engineer",based_in:"Overland Park, Kansas",education:"M.S. Computer Science, University of Kansas",industries:["healthcare","banking","higher education","energy"],open_to:"Software engineering roles"}],
+    me:["GET","/rohit","200 OK",{name:"Rohit Annavarapu",role:"Full Stack Software Engineer",education:"M.S. Computer Science",industries:["healthcare","banking","higher education","energy"],open_to:"Software engineering roles"}],
     strengths:["GET","/rohit/strengths","200 OK",{strengths:["Breaking tricky problems into simple, testable steps","System design that grows only when it has to","Distributed systems: consensus, events, retries","APIs and data models that are hard to misuse","AI agents and LLM apps with real guardrails","Owning it in production, end to end"]}],
     ai:["GET","/rohit/ai","200 OK",{builds:["agents that plan and call tools","RAG over trusted documents","embeddings and vector search","MCP servers that connect models to real systems"],ships_with:["Claude Code","Cursor","GitHub Copilot"],keeps_it_safe:["evals before release","guardrails on actions","cited answers","human approval for risky steps"]}],
     stack:["GET","/rohit/stack","200 OK",{languages:["Java","Python","TypeScript","SQL"],backend:["Spring Boot","FastAPI","Django","REST","gRPC"],frontend:["React","Angular","Vue"],data:["PostgreSQL","Redis","Kafka","RabbitMQ"],cloud:["AWS","GCP","Azure","Kubernetes","Docker"]}],
@@ -153,4 +153,19 @@
     if(my===tok){S.busy=false;btns.forEach(z=>{z.removeAttribute("aria-disabled");z.classList.remove("run")})}
   }));
   draw();
+})();
+
+
+/* ---------- project skill symbols ---------- */
+(()=>{
+  const hint=fine?"Hover a badge to see the skill":"Tap a badge to see the skill";
+  document.querySelectorAll(".xs").forEach(ul=>{
+    const det=ul.nextElementSibling,b=det.querySelector("b"),lis=[...ul.querySelectorAll("li")];
+    const show=li=>{lis.forEach(x=>x.classList.toggle("on",x===li));ul.classList.toggle("act",!!li);det.classList.toggle("hint",!li);
+      b.textContent=li?li.dataset.n:hint;det.classList.remove("swap");void det.offsetWidth;det.classList.add("swap")};
+    show(null);
+    lis.forEach(li=>{li.addEventListener("pointerenter",e=>{if(e.pointerType==="mouse")show(li)});li.addEventListener("focus",()=>show(li));li.addEventListener("click",()=>show(li));
+      li.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();show(li)}})});
+    ul.addEventListener("pointerleave",e=>{if(e.pointerType==="mouse")show(null)});
+  });
 })();
