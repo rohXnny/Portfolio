@@ -7,6 +7,12 @@
 <meta name="description" content="Rohit Annavarapu, Full Stack Software Engineer. Software for healthcare, banking, higher education and energy.">
 <meta name="author" content="Rohit Annavarapu">
 <meta name="theme-color" content="#121212">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rohit Annavarapu | Full Stack Software Engineer">
+<meta property="og:description" content="Software for healthcare, banking, higher education and energy. Explore my skills, experience and story.">
+<meta property="og:image" content="og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="og-image.png">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +22,9 @@
 <link rel="stylesheet" href="css/demos.css">
 <link rel="stylesheet" href="css/experience.css">
 <link rel="stylesheet" href="css/skills.css">
+<link rel="stylesheet" href="css/beyond.css">
+<link rel="stylesheet" href="css/strengths.css">
+<link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
 
@@ -152,14 +161,47 @@
 <div class="side-scroll" id="scroll-hint" aria-hidden="true"><span class="lbl">Scroll</span><span class="trk"><i class="run"></i><i class="fill" id="scroll-fill"></i></span><svg class="chev" viewBox="0 0 14 14"><path d="M2 4l5 5 5-5"/></svg></div>
 
 <nav class="top" id="nav">
-  <div class="pill" id="pill"><a href="#home" class="on">Home</a><a href="#work">Work</a></div>
+  <div class="pill" id="pill"><a href="#home" class="on">Home</a><a href="#work">Work</a><a href="#beyond">Beyond Code</a><a href="#hire">Strengths</a><a href="#contact">Contact</a></div>
 </nav>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="carShape">
+      <path d="M72 300 L60 262 C58 242 76 230 112 223 L252 205 C300 162 362 132 452 126 C540 122 604 136 654 170 L724 205 C806 212 882 222 922 240 C946 251 952 272 946 290 L936 300 L850 300 A70 70 0 0 0 710 300 L300 300 A70 70 0 0 0 160 300 Z"/>
+      <path d="M286 207 C330 170 386 150 456 148 C526 147 576 160 616 182 L652 205 Z"/>
+      <path d="M470 149 L482 206"/>
+      <path d="M112 246 C300 238 600 236 916 252"/>
+      <path d="M484 208 L492 296"/>
+      <path d="M880 229 L926 241 L918 254 L880 246 Z"/>
+      <path d="M62 247 L102 238 L102 252 L66 258 Z"/>
+      <path d="M640 200 L660 188 L678 192 L670 206 Z"/>
+    </g>
+    <g id="suvShape">
+      <path d="M80 300 L70 150 Q72 120 100 118 L700 112 Q720 112 730 130 L760 200 L905 215 Q930 218 932 245 L935 300 L850 300 A70 70 0 0 0 710 300 L300 300 A70 70 0 0 0 160 300 Z"/>
+      <path d="M120 140 L680 136 L712 200 L120 205 Z"/>
+      <path d="M300 138 L300 204 M500 137 L500 203 M760 200 L760 300"/>
+      <path d="M40 180 L70 180 L70 260 L40 260 Z"/>
+    </g>
+    <g id="hyperShape">
+      <path d="M60 300 L70 265 C120 240 200 225 300 218 C380 170 470 150 560 152 C640 155 700 180 760 215 C850 228 930 250 960 280 L955 300 L850 300 A70 70 0 0 0 710 300 L300 300 A70 70 0 0 0 160 300 Z"/>
+      <path d="M390 205 C440 172 500 162 560 164 C620 167 668 186 700 214 Z"/>
+      <path d="M50 232 L150 222 L150 206 L50 214 Z M100 222 L110 238"/>
+      <path d="M590 252 C640 240 690 246 716 272"/>
+    </g>
+    <g id="wheelsS"><circle cx="230" cy="300" r="56"/><circle cx="230" cy="300" r="30"/><circle cx="780" cy="300" r="56"/><circle cx="780" cy="300" r="30"/></g>
+    <g id="wheelShape">
+      <circle cx="0" cy="0" r="56"/><circle cx="0" cy="0" r="36"/><circle cx="0" cy="0" r="8"/>
+      <path d="M0 -10 L0 -36 M9.5 -3 L34 -11 M6 8 L21 29 M-6 8 L-21 29 M-9.5 -3 L-34 -11"/>
+    </g>
+  </defs>
+</svg>
 
 <main id="top">
 
 <section class="page" id="home" data-page="home">
   <div class="home-hero"><div class="home-stick">
     <h2 class="home-name" id="home-name"><span class="nm"><span>Rohit Annavarapu</span><span class="role-t"><span class="roll" id="roll"><span class="rw cur">Full Stack</span></span><span class="se">Software Engineer</span></span></span></h2>
+    <div class="home-scrim" id="home-scrim" aria-hidden="true"></div>
     <div class="col"><div class="home-copy" id="home-copy">
       <h1 class="hello">Hello there!</h1>
       <p>I'm Rohit Annavarapu, a full stack software engineer. I've built software for companies in healthcare, banking, higher education and energy. Ask me anything like an API, test my problem solving below, see my work, and find out what drives me beyond code. If we align, you'll find my details under Contact.</p>
@@ -327,13 +369,142 @@
 </div></div>
 </section>
 
+<section class="page" id="beyond" data-page="beyond" hidden>
+  <div class="story" id="car-scene" style="height:190vh"><div class="sticky">
+    <div id="road"></div>
+    <div class="side-say l" id="say-l">Fast cars.</div>
+    <div class="side-say r" id="say-r">Clean code.</div>
+    <div id="topcar">
+      <svg viewBox="0 0 200 420" role="img" aria-label="Line drawing of a car seen from above, driving up the road">
+        <defs><linearGradient id="beamG" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+        <path class="beam" d="M58 36 L-10 -300 L95 -300 L78 36Z"/><path class="beam" d="M142 36 L105 -300 L210 -300 L122 36Z"/>
+        <rect x="38" y="78" width="16" height="50" rx="5" fill="#fff"/><rect x="146" y="78" width="16" height="50" rx="5" fill="#fff"/>
+        <rect x="38" y="298" width="16" height="54" rx="5" fill="#fff"/><rect x="146" y="298" width="16" height="54" rx="5" fill="#fff"/>
+        <path class="o" d="M60 30 C60 12 80 4 100 4 C120 4 140 12 140 30 L150 120 C152 150 152 280 150 340 C148 390 130 410 100 410 C70 410 52 390 50 340 C48 280 48 150 50 120 Z"/>
+        <path class="l" d="M64 122 C80 110 120 110 136 122 L130 170 C115 164 85 164 70 170 Z"/>
+        <path class="l" d="M70 180 C85 174 115 174 130 180 L130 268 C115 274 85 274 70 268 Z"/>
+        <path class="l" d="M72 282 C88 288 112 288 128 282 L132 322 C115 332 85 332 68 322 Z"/>
+        <path class="l" d="M80 30 L78 104 M120 30 L122 104"/>
+        <path class="l" d="M50 138 L34 144 L36 157 L50 155 M150 138 L166 144 L164 157 L150 155"/>
+        <path class="l" d="M62 32 L82 22 M138 32 L118 22"/>
+        <path d="M62 396 L82 404 M138 396 L118 404" stroke="#E3262B" stroke-width="4" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="car-cap" id="car-cap"><i></i><div class="cc"><b>Scroll down to drive</b><span>and get to know more about me</span></div></div>
+  </div></div>
+
+  <div class="story" id="cars-scene" style="height:200vh"><div class="sticky">
+    <div class="tiles" id="tiles">
+      <div class="tile" style="--g:linear-gradient(135deg,#123f84,#07162f)"><svg viewBox="0 0 1000 400"><use href="#carShape"/><use href="#wheelsS"/></svg><div class="brand">BMW</div><div class="mdl">M5</div></div>
+      <div class="tile" style="--g:linear-gradient(135deg,#63228a,#1a0826)"><svg viewBox="0 0 1000 400"><use href="#carShape"/><use href="#wheelsS"/></svg><div class="brand">BMW</div><div class="mdl">M8</div></div>
+      <div class="tile" style="--g:linear-gradient(135deg,#3f4a3a,#0f130d)"><svg viewBox="0 0 1000 400"><use href="#suvShape"/><use href="#wheelsS"/></svg><div class="brand">Mercedes-AMG</div><div class="mdl">G-Wagen</div></div>
+      <div class="tile" style="--g:linear-gradient(135deg,#d2661a,#3a1605)"><svg viewBox="0 0 1000 400"><use href="#hyperShape"/><use href="#wheelsS"/></svg><div class="brand">McLaren</div><div class="mdl">Senna</div></div>
+    </div>
+    <h2 class="big-line">I drive and dream about<span class="hand">Fast</span>cars..</h2>
+  </div></div>
+
+  <div class="quote"><blockquote class="reveal-q">
+    <span class="qm" aria-hidden="true">“</span>
+    <p>Great cars and great software are built the same way: <em>precise engineering, tested at the limit, trusted to perform when it matters.</em></p>
+    <cite>Rohit Annavarapu</cite>
+  </blockquote></div>
+
+  <div class="story" id="fuel-scene" style="height:190vh"><div class="sticky">
+    <p class="say" id="say"><span>I run on </span><span class="w0" data-i="0">caffeine</span><span class="w0" data-i="1">, new skills</span><span class="w0" data-i="2"> and new AI tools.</span></p>
+    <div class="track" id="track">
+      <div class="ground"></div>
+      <div class="chip" data-c="0">new skills</div>
+      <div class="chip" data-c="1">new AI tools</div>
+      <div class="chip" data-c="2">new ideas</div>
+      <div id="cup">
+        <svg viewBox="0 0 170 215" role="img" aria-label="A running coffee cup">
+          <path class="red" d="M58 48 C46 32 70 24 58 6"/><path class="red" d="M82 48 C70 30 94 22 82 2"/><path class="red" d="M106 48 C94 32 118 24 106 6"/>
+          <path class="s" d="M8 104 L-10 96 M8 104 L-6 118" opacity=".5"/>
+          <path class="s" d="M36 62 L36 142 Q36 162 56 162 L112 162 Q132 162 132 142 L132 62 Z"/>
+          <path class="s" d="M132 82 C166 82 166 132 132 132"/>
+          <circle cx="68" cy="100" r="4.5" fill="#fff"/><circle cx="100" cy="100" r="4.5" fill="#fff"/>
+          <path class="s" d="M70 120 Q84 132 98 120"/>
+          <path class="s arm" id="arm1" d="M36 110 L12 124"/>
+          <line class="s leg" id="leg1" x1="66" y1="162" x2="60" y2="208"/>
+          <line class="s leg" id="leg2" x1="102" y1="162" x2="108" y2="208"/>
+        </svg>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="bio"><div class="col">
+    <h2>Engineer by trade, learner by habit.</h2>
+    <p>I started in Mumbai building pricing and inventory systems for a fuel retail network, came to Kansas for my Master's, and have since worked on student registration, payment processing and pharmaceutical orders. I'm happiest designing the backend: the APIs, the data and the events that tie services together, built to fail safely and recover cleanly.</p>
+    <div class="edu"><b>Master of Science, Computer Science</b><span>University of Kansas</span></div>
+  </div></div>
+</section>
+
+<section class="page hirepg" id="hire" data-page="hire" hidden><div class="col">
+  <h2 class="page-title">Strengths</h2>
+  <blockquote class="hq"><p>“The best engineers aren't defined by one stack or one industry. They're defined by how fast they master the next one.”</p></blockquote>
+
+  <div class="journey" aria-label="Career path across four industries">
+    <div class="jline"></div>
+    <div class="jstop d-energy"><span class="dot"></span><b>Energy</b><small>Puma Energy</small></div>
+    <div class="jstop d-edu"><span class="dot"></span><b>Higher Education</b><small>University of Kansas</small></div>
+    <div class="jstop d-bank"><span class="dot"></span><b>Banking</b><small>Bank of America</small></div>
+    <div class="jstop d-health"><span class="dot"></span><b>Healthcare</b><small>Cardinal Health</small></div>
+  </div>
+  <div class="reasons">
+    <div class="rs"><span class="rn">01</span><h4>Four industries, no reset</h4><p>I moved from fuel retail to universities to banking to healthcare. Each came with new rules, new users and new regulations, and each time I was delivering within weeks.</p></div>
+    <div class="rs"><span class="rn">02</span><h4>I adapt to any stack</h4><p>Backend or front end, on-premises or cloud, one language or another. I learn what the team already uses instead of asking the team to change.</p></div>
+    <div class="rs"><span class="rn">03</span><h4>Built for high-stakes systems</h4><p>Payments, prescriptions and student records taught me to design for security, compliance and systems that recover on their own.</p></div>
+    <div class="rs"><span class="rn">04</span><h4>Early on new technology</h4><p>I bring new tools, including AI, into real work quickly and responsibly, with testing and review deciding what ships.</p></div>
+  </div>
+
+  <div class="cta"><div><h3 class="talk">Sounds like a fit?</h3><p class="lead" style="margin:6px 0 0">Let's talk about your team and what you're building.</p></div><a class="ctabtn" href="#contact">Get in touch</a></div>
+</div></section>
+
+<section class="page" id="contact" data-page="contact" hidden><div class="col">
+  <h2 class="page-title">Contact</h2>
+  <p class="lead">Here's how to reach me. Leave your details too, and I'll get back to you.</p>
+  <div class="contact-grid">
+    <div class="card reach">
+      <button class="copy" type="button" data-v="rohitannavarapu.2001@gmail.com" data-l="Email"><span><span class="k">Email</span>rohitannavarapu.2001@gmail.com</span><span class="go">Copy</span></button>
+      <button class="copy" type="button" data-v="+1 913-353-6762" data-l="Phone"><span><span class="k">Phone</span>+1 913-353-6762</span><span class="go">Copy</span></button>
+      <button class="copy" type="button" data-v="Overland Park, Kansas" data-l="Location"><span><span class="k">Based in</span>Overland Park, Kansas</span><span class="go">Copy</span></button>
+    </div>
+    <div class="card leave" id="leave">
+      <h3>Leave your details</h3>
+      <p>Hiring or have a project in mind? Leave your details and I'll reach out to you.</p>
+      <form id="lead" name="lead" data-netlify="true" netlify-honeypot="bot-field" novalidate><input type="hidden" name="form-name" value="lead"><p hidden><label>Leave empty<input name="bot-field"></label></p><input type="hidden" name="visit" id="l-visit">
+        <label>Name<input id="l-name" name="name" autocomplete="name" required></label>
+        <label>Company<input id="l-company" name="company" autocomplete="organization"></label>
+        <label class="full">Email<input id="l-email" name="email" type="email" autocomplete="email" required></label>
+        <label class="full">You are a
+          <select id="l-role" name="role"><option>Recruiter</option><option>Hiring manager</option><option>Engineer</option><option>Founder</option><option>Other</option></select></label>
+        <label class="full">Message (optional)<textarea id="l-msg" name="message" placeholder="The role, the team, or a good time to talk"></textarea></label>
+        <div class="err" id="l-err" hidden></div>
+        <button type="submit">Send my details</button>
+      </form>
+    </div>
+  </div>
+  <div class="card sunny" id="sunny" role="region" aria-label="Chat with Sunny">
+    <div class="sn-head"><span class="sn-av" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#5a3500" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></span><div><b>Sunny</b><small><i></i>Rohit's assistant · usually replies instantly</small></div></div>
+    <div class="sn-log" id="sn-log" aria-live="polite"></div>
+    <div>
+      <form class="sn-form" id="sn-form" autocomplete="on"><label class="sr" for="sn-in">Message Sunny</label><textarea id="sn-in" rows="1" placeholder="Pick an option above to start" disabled></textarea><button type="submit" id="sn-send" aria-label="Send" disabled><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></form>
+      <p class="sn-note">Anything you share with Sunny is sent to Rohit so he can follow up.</p>
+    </div>
+  </div>
+  <form name="sunny" data-netlify="true" netlify-honeypot="bot-field" hidden aria-hidden="true"><input name="bot-field"><input name="status"><input name="intent"><input name="details"><input name="fit"><input name="name"><input name="email"><input name="company"><textarea name="transcript"></textarea><textarea name="visit"></textarea></form>
+</div></section>
+
 </main>
+<div class="toast" id="toast" hidden></div>
 <div id="bubble" role="status">Hi there! Welcome to my portfolio.<small>Thank you for visiting.</small></div>
 
 <script src="js/core.js"></script>
 <script src="js/home.js"></script>
 <script src="js/demos.js"></script>
 <script src="js/skills.js"></script>
+<script src="js/beyond.js"></script>
+<script src="js/contact.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
