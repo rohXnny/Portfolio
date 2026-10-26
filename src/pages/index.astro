@@ -8,6 +8,8 @@ import Work from "../components/Work.astro";
 import Beyond from "../components/Beyond.astro";
 import Strengths from "../components/Strengths.astro";
 import Contact from "../components/Contact.astro";
+import Sunny from "../components/Sunny.astro";
+import CommandMenu from "../components/CommandMenu.astro";
 ---
 <Base>
   <Room />
@@ -20,6 +22,8 @@ import Contact from "../components/Contact.astro";
     <Strengths />
     <Contact />
   </main>
+  <Sunny />
+  <CommandMenu />
   <div class="toast" id="toast" hidden></div>
   <div id="bubble" role="status">Hi there! Welcome to my portfolio.<small>Thank you for visiting.</small></div>
 
@@ -32,6 +36,12 @@ import Contact from "../components/Contact.astro";
     import "../scripts/skills";
     import "../scripts/beyond";
     import "../scripts/contact";
+    import "../scripts/sunny-chat";
+    import "../scripts/sunny";
+    import "../scripts/command";
+    import "../scripts/three";
+    import "../scripts/depth";
+    import "../scripts/motion";
     import "../scripts/router";
   </script>
 </Base>

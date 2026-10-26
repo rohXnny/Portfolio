@@ -35,6 +35,7 @@ function setGreet(on,left){
   bubble.classList.toggle("on",on&&state.current==="home");
 }
 function lightLoop(t){
+  if(document.documentElement.dataset.three==="on")return; // the 3D room (three/room.ts) takes over
   try{lightStep(t)}catch(e){}
   requestAnimationFrame(lightLoop);
 }

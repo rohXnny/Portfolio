@@ -157,6 +157,8 @@ import { reduce, fine, state } from "./shared";
     if(my===tok){S.busy=false;btns.forEach(z=>{z.removeAttribute("aria-disabled");z.classList.remove("run")})}
   }));
   draw();
+  // Read-only view of the simulation for the 3D renderer (three/cluster.ts).
+  window.__sx={S,P,appPos,DB,LB,CACHE,QUEUE,USERS,M};
 })();
 
 
