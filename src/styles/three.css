@@ -1,0 +1,31 @@
+/* ---------- 3D layer ---------- */
+canvas.gl { display: block; position: absolute; inset: 0; width: 100%; height: 100%; }
+html[data-three="on"] #room { display: none; }
+
+/* sandbox map: the 2D svg keeps the layout, the canvas draws over it */
+.sx-gl { position: relative; }
+.sx-map.gl-on #sx-svg { visibility: hidden; }
+.sx-map.gl-on { background: radial-gradient(ellipse at 50% 40%, rgb(157 177 255 / .06), transparent 70%); }
+
+/* Beyond Code: the 3D road replaces the drawn road and car */
+#car-scene.gl-on #road, #car-scene.gl-on #topcar { display: none; }
+#car-scene .sticky > canvas.gl { z-index: 0; }
+#car-scene .car-cap, #car-scene .side-say { z-index: 2; }
+
+/* ambient fields behind zones */
+.field-wrap { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: clip; }
+.field-stick { position: sticky; top: 0; height: 100svh; }
+#experience > .col, #skills > .col, #hire > .col, #contact > .col { position: relative; z-index: 1; }
+#hire, #contact, #skills { position: relative; isolation: isolate; }
+#experience .field-wrap { opacity: .75; }
+#hire .field-wrap, #contact .field-wrap { opacity: .7; }
+
+/* skills globe (scripts/depth.ts) */
+.icons.globe { position: relative; display: block; height: min(600px, 62vw); max-width: 640px; cursor: grab; touch-action: pan-y; }
+.icons.globe:active { cursor: grabbing; }
+.icons.globe .ic { position: absolute; left: 50%; top: 50%; margin: -48px 0 0 -48px; transition: none; will-change: transform, opacity; }
+.icons.globe .ic:hover, .icons.globe .ic.sel { filter: drop-shadow(0 0 14px rgb(245 196 0 / .5)) !important; }
+
+/* tilted cards keep a smooth return */
+.wall .xt, #cars-scene .tile, .rs, .edu-card, .leave { transform-style: flat; will-change: transform; }
+.wall .xt .mock { transition: transform .2s; }
